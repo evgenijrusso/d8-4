@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django.contrib.sites',
     'django.contrib.staticfiles',
     'protect',
     'sign',
@@ -69,7 +70,10 @@ TEMPLATES = [
     },
 ]
 
-LOGIN_URL = 'sign/login/'
+LOGIN_URL = '/accounts/login/'
+
+SITE_ID = 1
+# LOGIN_URL = 'sign/login/'
 LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'work.wsgi.application'
