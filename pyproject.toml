@@ -9,6 +9,7 @@ packages = [{include = "d8_4"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^5.0.1"
+django-allauth = "^0.60.0"
 
 
 [build-system]
