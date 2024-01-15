@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-bqp279qz+39l6op906!p0c8-df$wu7^2wa=@hn9y)$kwj*xr(d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'sign'
+    'protect',
+    'sign',
 ]
 
 MIDDLEWARE = [
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'work.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,6 +68,9 @@ TEMPLATES = [
         },
     },
 ]
+
+LOGIN_URL = 'sign/login/'
+LOGIN_REDIRECT_URL = '/'
 
 WSGI_APPLICATION = 'work.wsgi.application'
 
