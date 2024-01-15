@@ -4,3 +4,4 @@
 - poetry install
 - `python manage.py startapp sign`
 - `python manage.py startapp protect`
+- Создал суперпользователя: `python manage.py createsuperuser` (admin-1)
